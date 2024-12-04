@@ -9,9 +9,11 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 )
 
 func main() {
+	time.Sleep(10 * time.Second)
 	log := logger.SetupLogger(logger.Local, "./logs.log")
 	log.Info("starting app")
 	configPath := flag.String("c", "", "Path to the configuration file")
